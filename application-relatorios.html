@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin - Relatórios</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <section id="application">
+                <div class="nav-bar">
+                    <div class="header">
+                        <h1>Admin</h1>
+                    </div>
+
+                    <div class="nav">
+                        <ul>
+                            <div>
+                                <span></span>
+                                <li>
+                                    <a href="application-dashboard.html" >
+                                        <span class="material-symbols-outlined">dashboard</span>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div>
+                                <span>Matriculas</span>
+                                <li>
+                                    <a href="application-alunos.html" >
+                                        <span class="material-symbols-outlined">person</span>
+                                        <span>Alunos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-matriculas.html" >
+                                        <span class="material-symbols-outlined">folder</span>
+                                        <span>Matriculas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-classes.html" >
+                                        <span class="material-symbols-outlined">subject</span>
+                                        <span>Classes</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-turmas.html">
+                                        <span class="material-symbols-outlined">groups</span>
+                                        <span>Turmas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-cursos.html">
+                                        <span class="material-symbols-outlined">summarize</span>
+                                        <span>Cursos</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div>
+                                <span>Relatórios</span>
+                                <li>
+                                    <a href="application-relatorios.html" class="active">
+                                        <span class="material-symbols-outlined">description</span>
+                                        <span>Imprimir Relatórios</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <main>
+                    <div class="header">
+                        <div class="app-name">
+                            <span class="material-symbols-outlined">school</span>
+                            <span>Gestão Escolar</span>
+                        </div>
+                        <div class="user-profile">
+                            <span class="material-symbols-outlined">account_circle</span>
+                            <span>Futila Jorge</span>
+                            <button id="btn-sair">Sair</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <section>
+                            <h1 class="section-title">Reports</h1>
+                            <div class="table-and-form-container">
+                              <div class="table-container">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Relação nominal dos alunos inscritos</td>
+                                            <td>
+                                                <button class="primary">Imprimir</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Matriculas realizadas por turma</td>
+                                            <td>
+                                                <button class="primary">Imprimir</button>
+                                            </td>
+                                        </tr>
+                                        
+                                       
+                                        
+                                    </tbody>
+                                </table>
+                              </div>
+                               
+                            </div>
+                        </section>
+                        
+                    </div>
+                </main>
+            </section> 
+        </div>
+        <script>
+            // apenas para teste
+            document.getElementById("btn-sair").addEventListener("click", e => window.location.href ="index.html")
+        </script>
+    </body>
+</html>

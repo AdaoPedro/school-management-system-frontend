@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin - Classes</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <section id="application">
+                <div class="nav-bar">
+                    <div class="header">
+                        <h1>Admin</h1>
+                    </div>
+
+                    <div class="nav">
+                        <ul>
+                            <div>
+                                <span></span>
+                                <li>
+                                    <a href="application-dashboard.html" >
+                                        <span class="material-symbols-outlined">dashboard</span>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div>
+                                <span>Matriculas</span>
+                                <li>
+                                    <a href="application-alunos.html" >
+                                        <span class="material-symbols-outlined">person</span>
+                                        <span>Alunos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-matriculas.html" >
+                                        <span class="material-symbols-outlined">folder</span>
+                                        <span>Matriculas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-classes.html" class="active">
+                                        <span class="material-symbols-outlined">subject</span>
+                                        <span>Classes</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-turmas.html">
+                                        <span class="material-symbols-outlined">groups</span>
+                                        <span>Turmas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="application-cursos.html">
+                                        <span class="material-symbols-outlined">summarize</span>
+                                        <span>Cursos</span>
+                                    </a>
+                                </li>
+                            </div>
+                            <div>
+                                <span>Relatórios</span>
+                                <li>
+                                    <a href="application-relatorios.html">
+                                        <span class="material-symbols-outlined">description</span>
+                                        <span>Imprimir Relatórios</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <main>
+                    <div class="header">
+                        <div class="app-name">
+                            <span class="material-symbols-outlined">school</span>
+                            <span>Gestão Escolar</span>
+                        </div>
+                        <div class="user-profile">
+                            <span class="material-symbols-outlined">account_circle</span>
+                            <span>Futila Jorge</span>
+                            <button id="btn-sair">Sair</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <section>
+                            <h1 class="section-title">Classes</h1>
+                            <div class="table-and-form-container">
+                              <div class="table-container">
+                                <div class="action-btns">
+                                    <div class="search-field">
+                                        <input type="text" name="field" id="field" placeholder="Pesquisar">
+                                        <span class="material-symbols-outlined">search</span>
+                                    </div>
+                                    <button class="primary" id="cadastrar-novo">Cadastrar novo</button>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>N/O</th>
+                                            <th>Descricao</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>10 Classe</td>
+                                            <td>
+                                                <button class="primary" id="1" name="btn-editar">Editar</button>
+                                                <button class="red" id="1" name="btn-excluir">Excluir</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>11 Classe</td>
+                                            <td>
+                                                <button class="primary" id="2" name="btn-editar">Editar</button>
+                                                <button class="red" id="2" name="btn-excluir">Excluir</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>12 Classe</td>
+                                            <td>
+                                                <button class="primary" id="3" name="btn-editar">Editar</button>
+                                                <button class="red" id="3" name="btn-excluir">Excluir</button>
+                                            </td>
+                                        </tr>
+                                        
+                                       
+                                        
+                                    </tbody>
+                                </table>
+                              </div>
+                              <div class="form-container hidden">
+                                    <div class="action-btns">
+                                        <button  id="voltar">Voltar</button>
+                                        <button type="submit" class="primary" form="form">Salvar o registo</button>
+                                    </div>
+                                    <form action="form.php" method="POST" id="form">
+                                        <div class="field-container">
+                                            <label for="descricao">Descricao </label>
+                                            <input type="text" id="descricao" name="descricao" placeholder="Descricao">
+                                            <p class="show">Invalido</p>
+                                        </div>
+                                    </form>
+                              </div>
+                                
+                               
+                            </div>
+                        </section>
+                        
+                    </div>
+                </main>
+            </section> 
+        </div>
+        <script>
+            const btnAdicionar = document.getElementById("cadastrar-novo")
+            const btnVoltar = document.getElementById("voltar")
+            const formContainer = document.querySelector(".form-container")
+            const tableContainer = document.querySelector(".table-container")
+            const form = document.getElementById("form")
+
+            btnAdicionar.addEventListener("click", function () {
+                formContainer.classList.toggle("hidden")
+                tableContainer.classList.toggle("hidden")
+            })
+
+            btnVoltar.addEventListener("click", function () {
+                formContainer.classList.toggle("hidden")
+                tableContainer.classList.toggle("hidden")
+                form.setAttribute("action", "form.php")
+            })
+
+            document.getElementsByName("btn-excluir").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const confirmado = confirm("Deseja excluir o registro " + e.target.id)
+                    if (confirmado) window.location.href = "form.php?action=deletar;id="+e.target.id
+                })
+            })
+
+            document.getElementsByName("btn-editar").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const confirmado = confirm("Deseja editar o registro " + e.target.id)
+                    formContainer.classList.toggle("hidden")
+                    tableContainer.classList.toggle("hidden")
+                    
+                    form.setAttribute("action", "form.php?action=editar;id=" + e.target.id)
+                })
+            })
+
+            // apenas para teste
+            document.getElementById("btn-sair").addEventListener("click", e => window.location.href ="index.html")
+        </script>
+    </body>
+</html>

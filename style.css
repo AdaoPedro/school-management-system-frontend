@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #232323;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    height: 100vh; width: 100vw;
+    overflow: hidden; 
+}
+
+.container {
+    height: 100%; width: 100%;
+    overflow: hidden; 
+}
+
+.field-container {
+    display: flex; flex-direction: column; align-items: start; justify-content: center;
+    width: 100%;
+    padding-bottom: 8px;
+
+}
+
+.field-container label {
+    font-weight: 300;
+    font-size: 13px;
+    color: #232323;
+    margin-bottom: 3px;
+}
+
+.field-container input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    width: 100%;
+}
+
+.field-container select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    width: 100%;
+}
+
+.field-container p {
+    color: #ec7b7b;
+    margin-top: 2px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.field-container p.show {
+    opacity: 1;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    color: #ccc;
+    border-radius: 2px;
+    color: #232323;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.primary {
+    background-color: #232323;
+    color: #f2efef;
+}
+
+button.red {
+    background-color: #ec7b7b;
+    color: #f2efef;
+}
+
+table {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table tr th {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    background-color: #f2efef55;
+}
+
+table tr th,
+table tr td {
+    padding: 10px 5px;
+}
+
+table tbody tr {
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f2efef55
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2efefa3
+}
+
+table tbody tr td:last-child {
+    text-align: right;
+}
+
+.search-field {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 10px 14px; 
+    width: 250px;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.search-field span {
+    position: absolute;
+    font-weight: 200;
+    top: 4px; right: 4px;
+    cursor: pointer;
+}
+
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+/* --------------------index.html------------------------------- */
+
+#login {
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    height: 100%; width: 100%;
+}
+
+#login #login-form {
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    border-radius: 5px;
+    height: 450px;
+}
+
+#login #login-form .img-container {
+      padding: 0 20px;
+}
+
+#login #login-form .img-container,
+#login #login-form .form-container {
+    height: 100%;
+}
+
+#login #login-form .img-container {
+    background-color: #f2efef;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+}
+
+#login #login-form .img-container img {
+    width: 360px;
+}
+
+#login #login-form .form-container {
+    background-color: #abdbe3;
+    padding: 0 50px;
+    width: 360px;
+    position: relative;
+}
+
+#login #login-form .form-container .titulos {
+    padding: 50px 0 30px 0;
+    width: 100%;
+}
+
+#login #login-form .form-container .titulos h4 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#login #login-form .form-container .titulos h1 {
+    font-weight: 400;
+}
+
+#login #login-form .btn-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#login #login-form .btn-container button {
+    width: 100%;
+}
+
+#login #login-form .form-container .nota-rodape {
+    position: absolute; bottom: 0; left: 50px;
+    padding: 5px 0;
+    width: 100%;
+}
+
+/* --------------------application------------------------------- */
+
+#application {
+    background-color: #f2efef;
+    height: 100%; width: 100%;
+    display: flex; flex-direction: row; align-items: stretch; justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* --------------------application:navbar------------------------------- */
+
+#application .nav-bar {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+#application .nav-bar .header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2efef;
+    margin-bottom: 20px;
+}
+
+#application .nav-bar .header h1 {
+    text-transform: uppercase;
+}
+
+#application .nav-bar .nav > ul div {
+    margin-bottom: 20px;
+}
+
+#application .nav-bar .nav > ul div > span {
+    font-weight: 300;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #3c3c3c;
+}
+
+#application .nav-bar .nav > ul a {
+    display: block;
+    padding: 5px;
+    border-radius: 2px;
+    display: flex; flex-direction: row; align-items: center; justify-content: start; gap: 4px;
+    transition: all 0.5s ease;
+    border: 1px solid #f2efef;
+    margin-bottom: 4px;
+}
+
+#application .nav-bar .nav > ul a:hover {
+    background-color: #bdeef798;
+}
+
+#application .nav-bar .nav > ul a > span:first-child {
+    font-weight: 300;
+}
+
+#application .nav-bar .nav > ul a > span:last-child {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#application .nav-bar .nav > ul a.active {
+    background-color: #abdbe3;
+    border: none;
+}
+
+/* --------------------application > main------------------------------- */
+
+#application main {
+    width: 100%;
+    height: 100%;
+    display: flex; flex-direction: column; align-items: stretch; justify-content: stretch; gap: 10px;
+}
+
+#application main > div.header,
+#application main > div.content {
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px;
+}
+
+/* --------------------application > main >header------------------------------- */
+
+#application main > div.header {
+    height: 70px;
+    display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+    background-color: #abdbe3;
+} 
+
+#application main > div.header > div {
+    display: flex; flex-direction: row; align-items: center; justify-content: start; gap: 3px;
+}
+
+#application main > div.header > div span:first-child {
+    font-weight: 300;
+}
+
+#application main > div.header > div.app-name span:first-child {
+    border-radius: 50%;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+#application main > div.header > div.app-name span:last-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#application main > div.header #btn-sair {
+    color: #ec7b7b;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* --------------------application > main >content------------------------------- */
+
+#application main > div.content {
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+/* --------------------application > main >content > dashboard------------------------------- */
+
+#application main > div.content #dashboard {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: stretch; justify-content: stretch; gap: 10px;
+}
+
+#dashboard .dashboard-grid {
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: 1fr 5fr;
+    height: 100%;
+}
+
+#dashboard .dashboard-grid > div {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+#dashboard .dashboard-grid > div.listagem1 {
+    grid-column: 1/4;
+}
+
+#dashboard .dashboard-grid > div.estatistica {
+    display: flex; flex-direction: row; align-items: center; justify-content: start; gap: 5px;
+}
+
+#dashboard .dashboard-grid > div.estatistica div:first-child {
+    width: 50px; height: 50px;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    border-radius: 20px;
+}
+
+#dashboard .dashboard-grid > div.estatistica div:first-child span {
+    font-weight: 100;
+    font-size: 40px;
+}
+
+#dashboard .dashboard-grid > div.estatistica.primeiro div:first-child {
+    background-color: #f49b9b;
+}
+
+#dashboard .dashboard-grid > div.estatistica.segundo div:first-child {
+    background-color: #a3f8a0;
+}
+
+#dashboard .dashboard-grid > div.estatistica.terceiro div:first-child {
+    background-color: #eb9df6;
+}
+
+#dashboard .dashboard-grid > div.estatistica.quarto div:first-child {
+    background-color: #dddbdb;
+}
+
+#dashboard .dashboard-grid > div.estatistica div:last-child span {
+    font-weight: 300
+}
+
+#dashboard .dashboard-grid > div.estatistica div:last-child h4 {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#dashboard .dashboard-grid > .listagem > h4 {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#dashboard .dashboard-grid > .listagem2 ul {
+    padding-left: 20px;
+}
+
+#dashboard .dashboard-grid > .listagem2 ul li {
+    padding: 5px 10px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #f2efef;
+    list-style-type: decimal;
+}
+
+
+/* --------------------application > main >content > section ------------------------------- */
+
+#application main > div.content > section {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: stretch; justify-content: stretch; gap: 10px;
+}
+
+.table-and-form-container {
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 2px;
+    display: flex; flex-direction: row; align-items: stretch; justify-content: space-between;
+}
+
+.table-and-form-container .table-container,
+.table-and-form-container .form-container {
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.table-and-form-container .action-btns {
+    display: flex; flex-direction: row; align-items: center; justify-content: end; gap: 5px;
+    padding: 10px 0;
+}
+
+.table-and-form-container .table-container.hidden,
+.table-and-form-container .form-container.hidden {
+    width: 0;
+}
+
+
